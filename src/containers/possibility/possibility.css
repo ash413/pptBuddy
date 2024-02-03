@@ -1,0 +1,113 @@
+.website__converter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 2rem;
+    margin: 4rem;
+    border-radius: 1rem;
+    background: var(--gradient-bar);
+}
+
+.website__converter-container h1 {
+    font-family: var(--font-family);
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 50px;
+    color: var(--color-footer);
+    margin-bottom: 1rem;
+}
+
+.website__converter-container p {
+    font-family: var(--font-family);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 45px;
+    color: var(--color-footer);
+}
+
+.website__converter-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.website__converter-input form {
+    background-color: var(--color-footer);
+    border-radius: 20px;
+    color: #FFF;
+    font-family: var(--font-family);
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 50px;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    min-width: 150px;
+}
+
+.website__converter-input input {
+    font-family: var(--font-family);
+}
+
+@media screen and (max-width: 850px) {
+    .website__converter {
+        flex-direction: column;
+    }
+    .website__converter-input {
+        margin: 1rem 0 0;
+    }
+    .website__converter-input form {
+        min-width: 500px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .website__converter-input input {
+        margin: 1rem;
+    }
+}
+
+@media screen and (max-width:650px) {
+    .website__converter {
+        flex-direction: column;
+    }
+    .website__converter-input form {
+        min-width: 300px;
+
+    }
+    .website__converter-input {
+        margin: 2rem 0 0;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .website__converter {
+        margin: 4rem 2rem;
+    }
+    .website__converter-container h1 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    .website__converter-container p {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    .website__converter-input form {
+        max-width: 220px;
+        font-size: 14px;
+        line-height: 28px;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .website__converter-input form {
+        min-width: 230px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
