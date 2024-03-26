@@ -1,6 +1,6 @@
 import React from 'react';
-
-import { Footer, Possibility, Features, Whatwebsite, Header } from './containers';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Footer, Possibility, Features, Whatwebsite, Header, DownloadButton } from './containers';
 import { CTA, Navbar } from './components';
 import './App.css';
 
@@ -8,18 +8,21 @@ const App = () => {
   return (
     <div className="App">
       <div className='gradient__bg'>
-        <Navbar />
-        <Header />
+        <Router>
+          <Navbar />
+          <Header />
+          <Whatwebsite />
+          <Routes>
+            <Route exact path='/' element={<Possibility />} />
+            <Route path='/download' element={<DownloadButton />} />
+          </Routes>
+        </Router>
       </div>
-      
-      <Whatwebsite />
-      <Possibility /* used as Converter */ />
       <Features />
       <CTA />
-      
       <Footer />
     </div>
   )
 }
 
-export default App
+export default App;
