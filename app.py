@@ -87,7 +87,7 @@ def upload():
         session['ppt_buffer'] = ppt_buffer.getvalue()
             
         return redirect(url_for('download_presentation')) 
-    return render_template("index.html")  
+    return render_template("http://localhost:3000")  
 
 @app.route("/download")
 def download_presentation():
